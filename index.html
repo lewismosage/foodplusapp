@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <link rel="stylesheet" href="style2.css">
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Food+</h3>
+        <h1>Order Your Favorite Fast Food</h1>
+        <input type="text" id="search-bar" placeholder="                          Search food, drink, desserts">
+    </header>
+     
+    <section id="restaurant-list">
+        <h2>Restaurants</h2>
+        <div id="restaurants">
+            <!-- Restaurant items will be dynamically injected here -->
+        </div>
+    </section>
+
+    <section id="recommended-section">
+        <h2>Recommended for You</h2>
+        <div id="recommended">
+            <div class="recommended-item">
+                <img src="app.images/Margherita Pizza.jpg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+                <p>Ksh 855.00</p>
+                <button onclick="addToCart('Recommended', 'Margherita Pizza', 855.00)">Add to Cart</button>
+
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Spaghetti Carbonara.jpg" alt="Spaghetti Carbonara">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Pasta with a creamy sauce made from eggs, cheese, pancetta, and pepper.</p>
+                <p>Ksh 1299.00</p>
+                <button onclick="addToCart('Recommended', 'Spaghetti Carbonara', 1299.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Sushi Platter.jpg" alt="Sushi Platter">
+                <h3>Sushi Platter</h3>
+                <p>A selection of nigiri and maki rolls, including salmon, tuna, and avocado.</p>
+                <p>Ksh 1999.00</p>
+                <button onclick="addToCart('Recommended', 'Sushi Platter', 1999.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Caesar Salad.jpg" alt="Caesar Salad">
+                <h3>Caesar Salad</h3>
+                <p>Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
+                <p>Ksh 749.00</p>
+                <button onclick="addToCart('Recommended', 'Caesar Salad', 749.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Tacos al Pastor.jpg" alt="Tacos al Pastor">
+                <h3>Tacos al Pastor</h3>
+                <p>Soft tortillas filled with marinated pork, pineapple, and cilantro.</p>
+                <p>Ksh 999.00</p>
+                <button onclick="addToCart('Recommended', 'Tacos al Pastor', 999.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Grilled Chicken Burrito.jpg" alt="Grilled Chicken Burrito">
+                <h3>Grilled Chicken Burrito</h3>
+                <p>Flour tortilla stuffed with grilled chicken, rice, beans, and salsa.</p>
+                <p>Ksh 1099.00</p>
+                <button onclick="addToCart('Recommended', 'Grilled Chicken Burrito', 1099.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Vegan Buddha Bowl.jpg" alt="Vegan Buddha Bowl">
+                <h3>Vegan Buddha Bowl</h3>
+                <p>A nourishing bowl filled with quinoa, roasted veggies, avocado, and tahini dressing.</p>
+                <p>Ksh 1149.00</p>
+                <button onclick="addToCart('Recommended', 'Vegan Buddha Bowl', 1149.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Cheeseburger.jpg" alt="Cheeseburger">
+                <h3>Cheeseburger</h3>
+                <p>Juicy beef patty topped with cheddar cheese, lettuce, tomato, and pickles.</p>
+                <p>Ksh 949.00</p>
+                <button onclick="addToCart('Recommended', 'Cheeseburger', 949.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Pad Thai.jpg" alt="Pad Thai">
+                <h3>Pad Thai</h3>
+                <p>Stir-fried rice noodles with shrimp, tofu, peanuts, and bean sprouts.</p>
+                <p>Ksh 899.00</p>
+                <button onclick="addToCart('Recommended', 'Pad Thai', 899.00)">Add to Cart</button>
+            </div>
+            <div class="recommended-item">
+                <img src="app.images/Chocolate Lava Cake.jpg" alt="Chocolate Lava Cake">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Rich chocolate cake with a gooey molten center, served warm.</p>
+                <p>Ksh 555.00</p>
+                <button onclick="addToCart('Recommended', 'Chocolate Lava Cake', 555)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Drinks Container -->
+        <div class="box box_drnks" id="drinks">
+            <h2>Available Drinks</h2>
+            <ul>
+                <li>Coke - Ksh 100.00</li>
+                <button onclick="addToCart('Recommended', 'Coke', 500.00)">Add to Cart</button>
+                <li>Sprite - Ksh 100.00</li>
+                <button onclick="addToCart('Recommended', 'Sprite', 100.00)">Add to Cart</button>
+                <li>Fanta - Ksh 100.00</li>
+                <button onclick="addToCart('Recommended', 'Fanta', 100.00)">Add to Cart</button>
+                <li>Water - Ksh 50.00</li>
+                <button onclick="addToCart('Recommended', 'Water', 50.00)">Add to Cart</button>
+            </ul>
+        </div>
+    
+        <!-- Popular Foods Container -->
+        <div class="box box_foods" id="foods">
+            <h2>Most Popular Foods</h2>
+            <ul>
+                <li>Cheeseburger - Ksh 949.00</li>
+                <button onclick="addToCart('Recommended', 'Cheeseburger', 949.00)">Add to Cart</button>
+                <li>Margherita Pizza - Ksh 800.00</li>
+                <button onclick="addToCart('Recommended', 'Margherita Pizza', 855.00)">Add to Cart</button>
+                <li>Fries - Ksh 300.00</li>
+                <button onclick="addToCart('Recommended', 'Fries', 300.00)">Add to Cart</button>
+                <li>Caesar Salad - Ksh 749.00</li>
+                <button onclick="addToCart('Recommended', 'Caesar Salad', 749.00)">Add to Cart</button>
+            </ul>
+        </div>
+    
+        <!-- Add Extras Container -->
+        <div class="box" id="add_extra">
+            <h2>Add Extra Additional</h2>
+            <form action="additionals">
+                <label>
+                    <input type="checkbox" id="extra-ham" value="3.50"> More Ham @ Ksh 350.00
+                </label><br>
+                <label>
+                    <input type="checkbox" id="extra-spicy" value="0.50"> Spicy @ Ksh 50.00
+                </label><br>
+                <label>
+                    <input type="checkbox" id="extra-eggs" value="2"> Add Eggs @ Ksh 50.00
+                </label><br><br>
+    
+                <label for="order-notes">Add Notes:</label><br>
+                <textarea id="order-notes" placeholder="Write Notes"></textarea><br><br>
+    
+                <button type="button" onclick="dropUs()">Send Message</button>
+                <button type="button" onclick="addExtrasToCart()">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cart-total">
+            Total: Ksh. <span id="total-amount">0.00</span>
+        </div>
+        <button id="checkout-btn" onclick="goToCheckout()">Proceed to Checkout</button>
+    </section>
+
+    <section id="payment-section" style="display: none;">
+        <h2>Payment</h2>
+        
+        <div class="payment-form-container">
+            <!-- Mpesa Payment Form -->
+            <form id="payment-form-mpesa">
+                <img src="app.images/mpesalogo.jpg" alt="">
+                <h3>Pay with Mpesa</h3>
+                <label for="total-amount-mpesa">Total Amount:</label>
+                <span id="total-amount-mpesa">0.00</span>
+    
+                <label for="mpesa-phone">Phone Number:</label>
+                <input type="tel" id="mpesa-phone" placeholder="+254XXXXXXXXX" required>
+                
+    
+                <label for="mpesa-name">First Name and Surname:</label>
+                <input type="text" id="mpesa-name" required>
+                <p>If you did not receive the PUSH confirmation please try to create a new request.</p>
+                <button type="submit">Confirm</button>
+               
+                
+            </form>
+        </div>
+    </section>
+    
+    <section id="tracking-section" style="display: none;">
+        <h2>Order Tracking</h2>
+        <p id="order-status">Order Status: <span>Order Placed</span></p>
+    </section>
+
+    <section id="reviews-section" style="display: none;">
+        <h2>Leave a Review</h2>
+        <form id="review-form">
+            <label for="restaurant-select">Select Restaurant:</label>
+            <select id="restaurant-select">
+                <!-- Restaurant options will be dynamically populated -->
+            </select>
+            <label for="review-rating">Rating:</label>
+            <select id="review-rating">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Terrible</option>
+            </select>
+            <label for="review-text">Review:</label>
+            <textarea id="review-text" placeholder="Write your review here..." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+        <div id="reviews-display">
+            <!-- Reviews will be displayed here -->
+        </div>
+    </section>
+
+    
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    
+        
+</body>
+</html>

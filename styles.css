@@ -1,0 +1,516 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #ff8c00;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#search-bar {
+    width: 400px;
+    padding: 10px;
+    padding-left: 60px; /* Adjust padding for search icon */
+    padding-right: 60px; /* Adjust padding for filter button */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: width 0.3s ease; /* Smooth transition when resizing */
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 600px) {
+    #search-bar {
+        width: 70%; /* Make search bar responsive, takes up 90% of screen width */
+        padding-right: 40px; /* Reduce padding on smaller screens */
+        margin: 0 auto; /* Center the search bar */
+    }
+}
+
+#restaurant-list, #cart, #payment-section, #tracking-section, #reviews-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+h2 {
+    font-size: 1.5em;
+}
+
+#restaurants, #cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.restaurant, .cart-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    flex: 1 1 200px;
+}
+.restaurant {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .burger-palace {
+    background-image: url('app.images/burger\ background.jpg');
+  }
+
+  .pizza-world {
+    background-image: url('app.images/pizzaworld\ background\ 2.jpg');
+ }
+ .kfc {
+    background-image: url('app.images/kfcbackground.jpg');
+ }
+
+ .nairobi-street-kitchen {
+    background-image: url('app.images/NairobiStreetKitchen.jpg');
+  }
+
+#cart-items {
+    margin: 10px 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Recommended Package Styles */
+.recommended-package {
+    background: url('app.images/today\'s_discount.jpg') no-repeat center center; /* Add your image path here */
+    background-size: cover; /* This ensures the image covers the entire background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: white; /* Change text color if needed for contrast */
+}
+.recommended-package h3 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.recommended-package p {
+    margin: 5px 0;
+}
+
+.recommended-package button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.recommended-package button:hover {
+    background: #218838;
+}
+
+/* Recommended Items List */
+.recommended-items {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.recommended-items div {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    .recommended-package {
+        padding: 15px;
+    }
+
+    .recommended-package button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Main container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.box {
+    width: 30%;
+    padding: 15px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Drinks Container Background */
+.box_drnks {
+    background-image: url('app.images/popular%20drinks.webp');
+}
+
+/* Foods Container Background */
+.box_foods {
+    background-image: url('app.images/pizza%20world%20background.avif');
+}
+
+/* Text and content should remain readable over the background */
+.box h2, .box ul {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.box ul {
+    list-style: none;
+    padding-left: 0;
+}
+ul button{
+    background-color: #ff8c00;
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+/* Style for the add extra section */
+#add_extra {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    border: 1px solid #f0f0f0;
+}
+
+/* Headings */
+#add_extra h2 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* Form labels */
+#add_extra label {
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+/* Checkbox styling */
+#add_extra input[type="checkbox"] {
+    margin-right: 4px;
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: #ff8c00;
+}
+
+/* Textarea for notes */
+#order-notes {
+    width: 95%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 2px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Buttons styling */
+#add_extra button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Add hover effect for button */
+#add_extra button:hover {
+    background-color: #e67600;
+}
+
+/* Cancel button with a different color */
+#add_extra button:last-of-type {
+    background-color: hsl(33, 88%, 52%);
+    margin-top: 10px;
+}
+
+#add_extra button:last-of-type:hover {
+    background-color: #ff8c00;
+}
+
+/* General form structure */
+#add_extra form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    #add_extra {
+        padding: 10px;
+    }
+
+    #add_extra button {
+        font-size: 14px;
+    }
+}
+
+.remove-item-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.remove-item-btn:hover {
+    background-color: #ff8c00;
+}
+
+
+#checkout-btn, button[type="submit"] {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+/* Payment Section */
+#payment-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.payment-form-container {
+    width: 45%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 25%;
+}
+
+/* Scoped styles for payment forms */
+#payment-section h2 {
+    text-align: left; /* Center the heading */
+    margin-top: 20px;
+}
+
+.payment-form-container img {
+    width: 100px; /* Set the width of the image */
+    height: auto; /* Adjust the height automatically to maintain the aspect ratio */
+    display: block; /* Make the image a block-level element */
+    margin: 10px auto; /* Center the image and add margin */
+    border-radius: 0px; /* Add rounded corners to the image */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow around the image */
+    margin-top: 0px;
+}
+
+#payment-section h3 {
+    margin-bottom: 10px;
+}
+
+#payment-section label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#payment-section input {
+    width: 98%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#payment-section button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#payment-section button:hover {
+    background-color: darkgreen;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 600px) {
+    #payment-section {
+        flex-direction: column; /* Stack the forms vertically */
+        align-items: center;
+        gap: 15px; /* Adjust gap between forms */
+    }
+
+    .payment-form-container {
+        width: 90%; /* Make the forms take up most of the screen width */
+    }
+
+    #payment-section h2 {
+        text-align: center; /* Center the heading for smaller screens */
+        font-size: 1.5rem; /* Reduce font size slightly */
+    }
+
+    #payment-section h3 {
+        font-size: 1.2rem; /* Slightly reduce heading size inside forms */
+    }
+
+    #payment-section label {
+        font-size: 0.9rem; /* Reduce font size for labels */
+    }
+
+    #payment-section input {
+        width: 100%; /* Make input fields take full width */
+    }
+
+    #payment-section button {
+        width: 100%; /* Make buttons full width for better usability */
+        padding: 12px 0; /* Increase padding for better touch targets */
+        font-size: 1rem; /* Make button text larger */
+    }
+}
+
+
+
+
+#tracking-section p {
+    font-size: 1.2em;
+}
+
+#reviews-section {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+
+#review-form label, #review-form select, #review-form textarea {
+    margin: 10px 0;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+}
+
+#reviews-display {
+    margin-top: 20px;
+}
+
+.review-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review-item p {
+    margin: 0;
+}
+
+.review-item .rating {
+    color: #ff8c00;
+}
+
+#recommended-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#recommended-section h2 {
+    font-size: 1.8em;
+    color: #ff8c00;
+    margin-bottom: 15px;
+}
+
+#recommended {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recommended-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex: 1 1 150px; /* Adjust the size as needed */
+    text-align: center;
+}
+
+.recommended-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.recommended-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.recommended-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.recommended-item button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
