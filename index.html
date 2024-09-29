@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delivery App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="styles.css">
     
     </style>
@@ -167,26 +169,23 @@
     <section id="payment-section" style="display: none;">
         <h2>Payment</h2>
         
-        <div class="payment-form-container">
-            <!-- Mpesa Payment Form -->
-            <form id="payment-form-mpesa">
-                <img src="app.images/mpesalogo.jpg" alt="">
-                <h3>Pay with Mpesa</h3>
-                <label for="total-amount-mpesa">Total Amount:</label>
-                <span id="total-amount-mpesa">0.00</span>
-    
-                <label for="mpesa-phone">Phone Number:</label>
-                <input type="tel" id="mpesa-phone" placeholder="+254XXXXXXXXX" required>
-                
-    
-                <label for="mpesa-name">First Name and Surname:</label>
-                <input type="text" id="mpesa-name" required>
-                <p>If you did not receive the PUSH confirmation please try to create a new request.</p>
-                <button type="submit">Confirm</button>
-               
-                
-            </form>
-        </div>
+    <!-- Mpesa Payment Section -->
+    <div class="payment-form-container">
+        <form id="payment-form-mpesa">
+            <img src="app.images/mpesalogo.jpg" alt="">
+            <h3>Pay with Mpesa</h3>
+            <label for="total-amount-mpesa">Total Amount:</label>
+            <span id="total-amount-mpesa">0.00</span>
+
+            <label for="mpesa-phone">Phone Number:</label>
+            <input type="tel" id="mpesa-phone" placeholder="+254XXXXXXXXX" required>
+
+            <label for="mpesa-name">First Name and Surname:</label>
+            <input type="text" id="mpesa-name" required>
+            <p>If you did not receive the PUSH confirmation please try to create a new request.</p>
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
     </section>
     
     <section id="tracking-section" style="display: none;">
@@ -219,9 +218,8 @@
     </section>
 
     
+   
     <script src="script.js"></script>
     <script src="script1.js"></script>
-    
-        
 </body>
 </html>
