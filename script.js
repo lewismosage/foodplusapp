@@ -145,13 +145,36 @@ function setupPaymentForm() {
     
     mpesaPaymentForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        alert('Mpesa Payment Submitted! Download Receipt');
+        
+        // SweetAlert2 Confirmation Popup
+        Swal.fire({
+            icon: 'success',
+            title: 'Mpesa Payment Submitted!',
+            text: 'Your payment has been submitted successfully! Download your receipt.',
+            confirmButtonText: 'OK'
+        }).then(() => {
+            // Hide payment section and show tracking section
+            document.getElementById('payment-section').style.display = 'none';
+            document.getElementById('tracking-section').style.display = 'block';
+            
+            // Call the order tracking function
+            startOrderTracking();
+        });
+    });
+}
+
+/*
+function setupPaymentForm() {
+    const mpesaPaymentForm = document.getElementById('payment-form-mpesa');
+      mpesaPaymentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert('Mpesa Payment Submitted! Download Receipt'); 
         document.getElementById('payment-section').style.display = 'none';
         document.getElementById('tracking-section').style.display = 'block';
         startOrderTracking();
     });
 }
-
+    */
 function startOrderTracking() {
     const orderStatusDisplay = document.getElementById('order-status').getElementsByTagName('span')[0];
     const interval = setInterval(() => {
@@ -181,17 +204,46 @@ function setupReviewForm() {
             return;
         }
 
-        alert('Review submitted!');
+      //  alert('Review submitted!');//
         reviewForm.reset(); // Clear the form after submission
         displayReviews(restaurantIndex);
     });
 }
 
+
+document.getElementById('review-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const restaurant = document.getElementById('restaurant-select').value;
+    const rating = document.getElementById('review-rating').value;
+    const reviewText = document.getElementById('review-text').value;
+
+    if (restaurant && rating && reviewText) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Thank you for your review!',
+            text: `Your review for has been submitted.`,
+            confirmButtonText: 'OK'
+        });
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Incomplete Review',
+            text: 'Please make sure all fields are filled out before submitting your review.',
+            confirmButtonText: 'OK'
+        });
+    }
+});
+
+
+
+
+
 function displayReviews(restaurantIndex) {
     const reviewsDisplay = document.getElementById('reviews-display');
     reviewsDisplay.innerHTML = '';
 
-    // Example reviews (you would normally retrieve these from a database or local data)
+    // Example reviews //
     const reviews = [
         { rating: 5, text: "Great food!" },
         { rating: 4, text: "Good service." }
@@ -210,9 +262,13 @@ function displayReviews(restaurantIndex) {
 
 // Drop Us A Message //
 function dropUs() {
-    alert('Message sent!');
+    Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Your message has been successfully sent.',
+        confirmButtonText: 'OK'
+    });
 }
-
 function addExtrasToCart() {
     alert('Extras added to cart!');
 }
